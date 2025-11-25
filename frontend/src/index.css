@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 16px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ffffff;
+  border-left: 4px solid #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FFDE00;
+  border: 4px solid #000;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FF6B6B;
+}
+
+body {
+  background-color: #E0E7FF;
+  background-image: radial-gradient(#000 1.5px, transparent 1.5px);
+  background-size: 24px 24px;
+  @apply font-body text-black min-h-screen flex flex-col items-center justify-center overflow-x-hidden;
+}
+
+.marquee-container {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.marquee-content {
+  display: inline-block;
+  animation: marquee 20s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.text-stroke {
+  -webkit-text-stroke: 2px black;
+  /* Fallback or additional styling if needed */
+}

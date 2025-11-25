@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+instaloader
+requests
+beautifulsoup4
+fake-useragent
